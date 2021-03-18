@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <head>
-<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
 <script src="SCRIPT/script.js"></script>
 </head>
@@ -9,70 +8,46 @@
 <body>
 	<form name="minimercado">
 
-		<h2 style="text-align: center;">Cadastro de mercadorias</h2>
 
-		<table border="1" frame="below">
+		<h1>Cadastro de mercadorias</h1>
+
+		<table frame="below">
 			<tr>
 				<td>
-					<label for="nome">Nome:</label> 
-					<input type="text" id="nome" maxlength="50" size="60" />
+					<div class="form_group field">
+					<label for="nome" class="form_label">
+						<h2>Nome</h2>
+					</label> 
+					<input type="text" id="nome" maxlength="50" size="60" class="form_field" placeholder="Nome" />
+				</div>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<label for="msg">DescriÁ„o do item:</label><br>
-					<textarea id="msg" rows="5" cols="60"></textarea>
+					<label for="msg"><h2>Descri√ß√£o do item:</h2></label><br>
+					<textarea class="form_field_desc" id="msg" rows="5" cols="60"></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<label for="preco">PreÁo:</label>
-					<input type="number" id="preco" min="0" step="0.01" onBlur="valida()"/>
+					<label for="preco"><h2>Pre√ßo</h2></label>
+					<input class="form_field" type="number" id="preco" min="0" step="0.01" onBlur="valida()"/>
 				</td>
 			</tr>
 
-			<tr align="center">
-				<td>
-					<button type="submit">Submit</button>&nbsp;
-					<button type="reset">Reset</button>
+			<tr>
+				<td class="btn-container"> 
+					<button class="btn" type="submit">Submit</button>&nbsp;
+					<button class="btn" type="reset">Reset</button>
 				</td>
 			</tr>
 			
 			<tr>
-				<td align="center">
-					<!-- <div id="ìtextoAjax"></div>  -->
+				<td>
+					<!-- <div id="ÔøΩtextoAjax"></div>  -->
 				</td>
 			</tr>
 		</table>
 
 	</form>
-=======
-    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
-</head>
-
-<body>
-    <form>
-
-                 <h2 style="margin-left: -20px;">Cadastro de mercadorias</h2>
-        
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" />
-                </div>
-                <div>
-                    <label for="msg">Descri√ß√£o do item: </label>
-                    <br>
-                    <textarea id="msg" class = "textarea" rows="5" maxlength="50"></textarea>
-                </div>
-                <div>
-                    <label for="preco">Pre√ßo:</label>
-                    <input type="preco" id="preco" />
-                </div>
-                <div>
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
-                </div>
-     
-    </form>
->>>>>>> 142d47e63eb96c5ea8ad4fefa3883c83259cac74
 </body>
