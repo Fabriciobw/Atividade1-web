@@ -71,19 +71,24 @@
 		function loadDoc() {
 			
 			
-			if(document.value.)
-
+			if(document.minimercado.preco.value > 20){
 	 	var xhtml = new XMLHttpRequest();
 	  xhtml.onreadystatechange = retornoAjax
 	  xhtml.open("GET","resposta.html", true);
 	  xhtml.send();
+	} else{
+			alert('Preço menor que 20!');
 	}
+		
 		
 		function retornoAjax() {
 		    if (xhtml.readyState == 4 && xhtml.status == 200) {
 		     document.getElementById("textoAjax").innerHTML = xhtml.responseText;
 		    }
-		  }
+		  
+		
+		}
+		}
 
 </script>
 	
