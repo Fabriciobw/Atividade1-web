@@ -23,7 +23,7 @@
 <body>
 	<form name="minimercado" method="get" action="">
 
-		<div id="textoAjax">...</div>
+		
 		<h1>Cadastro de mercadorias</h1>
 
 		<table frame="below">
@@ -53,13 +53,16 @@
 			<tr>
 				<td class="btn-container"> 
 					
-					<button class="btn" type="submit" onClick="loadDoc()">Submit</button>&nbsp;
+					<button class="btn" type="button" onClick="loadAjax()">Submit</button>&nbsp;
 					<button class="btn" type="reset">Reset</button>
 				</td>
 			</tr>
 			
+			
+			
 			<tr>
 				<td >
+				<div id="textoAjax">...</div>
 					
 				</td>
 			</tr>
@@ -67,26 +70,29 @@
 
 	</form>
 	<script>
-
-		function loadDoc() {
+		
+			 xhtml = new XMLHttpRequest();
+	 
+		 function loadAjax() {
 			
+			if(document.minimercado.preco.value > 20){	
+				
+					
+			  xhtml.onreadystatechange = retornoAjax
+			  xhtml.open("GET","resposta.txt", true);
+			  xhtml.send();
 			
-			if(document.minimercado.preco.value > 20){
-	 	var xhtml = new XMLHttpRequest();
-	  xhtml.onreadystatechange = retornoAjax
-	  xhtml.open("GET","resposta.html", true);
-	  xhtml.send();
+	
 	} else{
 			alert('Preço menor que 20!');
+			
 	}
-		
-		
+			
 		function retornoAjax() {
 		    if (xhtml.readyState == 4 && xhtml.status == 200) {
 		     document.getElementById("textoAjax").innerHTML = xhtml.responseText;
 		    }
-		  
-		
+		  	
 		}
 		}
 
